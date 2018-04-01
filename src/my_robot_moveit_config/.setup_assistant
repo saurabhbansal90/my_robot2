@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: my_urdf_pkg
+    relative_path: urdf/pan_tilt.urdf
+  SRDF:
+    relative_path: config/my_robot.srdf
+  CONFIG:
+    author_name: Saurabh
+    author_email: saurabh.bansal.90@gmail.com
+    generated_timestamp: 1521321221
