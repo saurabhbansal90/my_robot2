@@ -1,0 +1,7 @@
+controller_list:
+  - name: /my_ns/joint_traj_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+      - base_to_child
+      - child_to_child2

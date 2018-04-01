@@ -56,11 +56,11 @@ int main(int argc, char** argv)
 	moveit::planning_interface::MoveGroupInterface group("Arm");
 	group.setPoseReferenceFrame("world");
 	geometry_msgs::PoseStamped target_pose;
-	target_pose = group.getCurrentPose("child_link");
+	target_pose = group.getCurrentPose("child_link2");
 	ROS_INFO("Current Pose: %lf, %lf, %lf", target_pose.pose.position.x, target_pose.pose.position.y, target_pose.pose.position.z);
 	target_pose.pose.position.x += 0.1;
 	target_pose.header.stamp = ros::Time::now();
-	group.setPoseTarget(target_pose, "child_link");
+	group.setPoseTarget(target_pose, "child_link2");
 	group.allowReplanning(true);
 	group.setStartStateToCurrentState();
 	group.setNumPlanningAttempts(5);
